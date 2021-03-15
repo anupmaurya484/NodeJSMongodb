@@ -1,0 +1,28 @@
+{
+  "name": "inventory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node-dev --inspect -- index.ts",
+    "assets": "rm -rf ./dist/src/assets && cp -r ./src/assets/ ./dist/src/assets",
+    "grunt": "tsc && npm run assets",
+    "prod": "pm2-runtime ./dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.15",
+    "ts-node-dev": "^1.0.0-pre.51",
+    "typescript": "^3.9.6"
+  },
+  "devDependencies": {
+    "@types/errorhandler": "^1.5.0",
+    "@types/express": "^4.17.7",
+    "@types/morgan": "^1.9.1",
+    "@types/node": "^14.0.22"
+  }
+}
